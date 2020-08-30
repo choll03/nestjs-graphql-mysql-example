@@ -1,0 +1,16 @@
+type Blog {
+    id: Int!,
+    title: String,
+    description: String,
+    comments: [Comment!]!
+}
+
+type Query{
+    blogs: [Blog!]!
+    blog(id: Int): Blog
+}
+
+type Mutation {
+    createBlog(title: String, description: String) : Blog,
+    createComment(blog_id: Int, comment: String) : Comment
+}

@@ -1,0 +1,8 @@
+type Comment {
+    id: Int!,
+    comment: String,
+}
+
+type Query {
+    comments(blog_id: Int): [Comment!]!,
+}
